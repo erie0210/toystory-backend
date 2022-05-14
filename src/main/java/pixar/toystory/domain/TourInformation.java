@@ -14,4 +14,7 @@ public abstract class TourInformation {
     @GeneratedValue
     @Column(name = "tour_information_id")
     private Long id;
+
+    @OneToOne(mappedBy = "post_id")
+    private Post post;
 }
